@@ -132,6 +132,10 @@ public class ImagePickerModule extends ReactContextBaseJavaModule
   public String getName() {
     return "ImagePickerManager";
   }
+  @Override    
+  public boolean canOverrideExistingModule() {        
+    return true;    
+  }   
 
   @ReactMethod
   public void showImagePicker(final ReadableMap options, final Callback callback) {
